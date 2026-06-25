@@ -1,0 +1,14 @@
+.all-product{
+ display: flex;
+ 
+ gap: 20px;
+ padding: 20px;
+    
+}
+img{
+    width: 50%;
+   
+}
+.productitem{
+    gap: 10px;
+}
