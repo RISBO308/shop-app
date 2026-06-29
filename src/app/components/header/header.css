@@ -1,20 +1,67 @@
-header{
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1rem;
-    
-}
-.logo{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
+header {
+  background-color: #0a0a0a; /* tu avais black */
+  display: flex;              /* tu avais déjà flex */
+  align-items: center;        /* tu avais déjà ça */
+  justify-content: space-between; /* tu avais déjà ça */
+  padding: 0 2rem;            /* tu avais 1rem, on augmente un peu */
+  height: 60px;               /* hauteur fixe pour un look propre */
+  position: sticky;           /* NOUVEAU : reste en haut au scroll */
+  top: 0;
+  z-index: 100;               /* reste au-dessus du contenu */
 }
 
-nav a{
-    color: white;
-    padding: 10px;
-    margin: 10px;
+/* Logo — tu avais color:white, font-size:1.5rem, font-weight:bold */
+.logo {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 2px; /* espacement des lettres pour un look premium */
+}
 
+/* Navigation — tu avais nav a { color:white, padding:10px, margin:10px } */
+nav {
+  display: flex;
+  gap: 4px;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.7); /* légèrement transparent au repos */
+  padding: 8px 14px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  /* transition : animation fluide au survol */
+  transition: color 0.2s, background 0.2s;
+}
+
+/* Effet survol sur les liens */
+nav a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Icônes panier et recherche (nouveaux boutons) */
+.header-icons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+}
+
+.icon-btn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
 }

@@ -1,15 +1,17 @@
 <div class="all-product">
 
-    @for (product of products; track product) {
-         
-<div class="productitem">
-         <a href="">
-        <img [src]="product.image" [alt]="product.name">
-       <h3> {{ product.name}} </h3>
-        <p> {{ product.price}} </p>
-    </a>
-</div>
-    }
-</div>
+  @for (product of products; track product) {
 
-            
+    <div class="productitem">
+      <a href="">
+        <img [src]="product.image" [alt]="product.name">
+
+        <h3>{{ product.name }}</h3>
+
+        <p>{{ product.price }}</p>
+      </a>
+    </div>
+
+  }
+
+</div>

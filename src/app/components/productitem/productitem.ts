@@ -1,17 +1,13 @@
-import { Component, input } from '@angular/core';
-import { Product } from '../../models/product';
-import { required } from '@angular/forms/signals';
-
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-productitem',
-  imports: [],
   templateUrl: './productitem.html',
-  styleUrl: './productitem.css',
+  styleUrls: ['./productitem.css']
 })
 export class Productitem {
-  
- 
+
+  @Input()
+  product: any;
+
 }
-
-

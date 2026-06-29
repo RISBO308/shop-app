@@ -1,5 +1,30 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial,sans-serif;
+/* Variables CSS : définies une fois, utilisées partout */
+/* Syntaxe d'utilisation : color: var(--gold); */
+:root {
+  --gold:       #c9a84c;  /* Couleur signature King Shopping */
+  --dark:       #0a0a0a;  /* Noir profond (header, footer) */
+  --text:       #1a1a1a;  /* Texte principal */
+  --text-muted: #888;     /* Texte secondaire */
+  --bg-page:    #f7f7f5;  /* Fond de page légèrement crème */
+  --border:     #eee;     /* Bordures légères */
+  --radius:     10px;     /* Arrondi des cartes */
+}
+
+/* Reset — tu avais déjà margin:0 et padding:0 */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+img    { max-width: 100%; display: block; }
+a      { text-decoration: none; color: inherit; }
+ul, ol { list-style: none; 
 }

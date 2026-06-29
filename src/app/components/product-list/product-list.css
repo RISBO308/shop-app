@@ -1,14 +1,51 @@
+/* Conteneur principal */
 .all-product{
- display: flex;
- 
- gap: 20px;
- padding: 20px;
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    padding: 30px;
 }
-img{
-    width: 70%;
-   
-}
+
+/* Carte produit */
 .productitem{
-    gap: 20px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+/* Animation */
+.productitem:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+}
+
+/* Le lien occupe toute la carte */
+.productitem a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/* Image */
+.productitem img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* Nom du produit */
+.productitem h3{
+    margin:15px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Prix */
+.productitem p{
+    margin:0 15px 20px;
+    color:#28a745;
+    font-size:20px;
+    font-weight:bold;
 }
