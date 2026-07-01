@@ -1,17 +1,17 @@
-<div class="all-product">
-
-  @for (product of products; track product) {
-
-    <div class="productitem">
-      <a href="">
-        <img [src]="product.image" [alt]="product.name">
-
-        <h3>{{ product.name }}</h3>
-
-        <p>{{ product.price }}</p>
-      </a>
-    </div>
-
-  }
-
+<div class="product-list">
+    @for (item of products(); track $index) {
+        <div class="productitem">
+            <a href="">
+                <div class="productitem__media">
+                    <img [src]="item.image" [alt]="item.name">
+                </div>
+                <div class="productitem__content">
+                    <h3>{{ item.name }}</h3>
+                    <p class="productitem__description">{{ item.description }}</p>
+                    <p class="productitem__price">{{ item.price | currency:'XAF':'symbol' }}</p>
+                    <p class="productitem__soldprice">solde:{{ item.soldprice | currency:'XAF':'symbol' }}</p>
+                </div>
+            </a>
+        </div>
+    }
 </div>

@@ -5,6 +5,6 @@ import { ProductList } from '../product-list/product-list';
   selector: 'app-container',
   imports: [ProductList],
   templateUrl: './container.html',
-  styleUrl: './container.css',
+  styleUrls: ['./container.css'],
 })
 export class Container {}
