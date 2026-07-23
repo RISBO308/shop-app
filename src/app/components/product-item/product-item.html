@@ -1,0 +1,28 @@
+<div class="product-item" [class.expanded]="showDescription()">
+  <div class="product-image">
+    <img [src]="product().image" [alt]="product().name">
+  </div>
+  <div class="product-details">
+    <h2 class="product-name">{{ product().name }}</h2>
+
+    <button type="button" class="description-toggle" (click)="toggleDescription()">
+      @if (showDescription()) {
+        Appuyer pour masquer la description
+      } @else {
+        Cliquer ici pour voir sa description
+      }
+    </button>
+
+    <div class="cart-actions">
+      <button type="button" class="btn btn-add" (click)="addToCart()" [disabled]="inCart()">
+        {{ inCart() ? 'Ajouté au panier' : 'Commander' }}
+      </button>
+      <button type="button" class="btn btn-remove" (click)="removeFromCart()" [disabled]="!inCart()">
+        Retirer du panier
+      </button>
+    </div>
+
+    <p class="product-description">{{ product().description }}</p>
+    <h3 class="product-price">{{ product().price }} XAF</h3>
+  </div>
+</div>

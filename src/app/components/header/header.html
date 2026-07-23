@@ -1,0 +1,21 @@
+<header>
+  <div class="logo">
+    <a class="logo-link" href="#">
+      <img src="/assets/images/products/logo ice box.jpg" alt="Logo ice box">
+      <span>ICE BOX</span>
+    </a>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/products">Products</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="cart-badge">
+    <span class="cart-icon">🛒</span>
+    <span>{{ cartService.cartCount() }}</span>
+  </div>
+</header>
