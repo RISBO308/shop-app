@@ -1,6 +1,8 @@
 # Pratiquejour5shoppapp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.1.
+## lien vercel
+ https://shop-app-psi-two.vercel.app/
 
 ## Development server
 
